@@ -7,6 +7,7 @@
 #include "memory_monitor.h"
 #include "system_info.h"
 #include "process_monitor.h"
+#include "disk_monitor.h"
 
 void clearScreen()
 {
@@ -23,6 +24,7 @@ int main()
     CPUMonitor cpu;
     MemoryMonitor memory;
     ProcessMonitor process;
+    DiskMonitor disk;
 
     while (true)
     {
@@ -53,6 +55,7 @@ int main()
         std::cout << "Refreshing every 1 second...\n";
 
         process.showProcesses();
+        disk.showDiskUsage();
 
         std::this_thread::sleep_for(
             std::chrono::seconds(1)

@@ -11,4 +11,5 @@ add_executable(
     memory_monitor.cpp
     system_info.cpp
     process_monitor.cpp
+    disk_monitor.cpp
 )
